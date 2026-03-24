@@ -1,7 +1,6 @@
 const KEY = "a6d33c42c42f7cd7aa93a115a6ac6fe0";
 const monitor = document.getElementById("runtime-console");
 const btn = document.getElementById("triggerSearch");
-
 // Function to push logs to our custom UI console
 const updateMonitor = (content, category) => {
   const entry = document.createElement("div");
