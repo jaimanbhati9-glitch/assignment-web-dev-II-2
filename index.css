@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+:root {
+  --primary-glow: #00f2ff;
+  --alert-yellow: #f8e602;
+  --dark-void: #0f0f1b;
+  --card-shade: rgba(255, 255, 255, 0.04);
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0a0a12 100%);
+  color: #efefef;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-wrapper {
+  width: 90%;
+  max-width: 900px;
+  background: var(--card-shade);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.title-text {
+  text-align: center;
+  color: var(--primary-glow);
+  text-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+  margin-top: 0;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.control-panel,
+.display-panel {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+#triggerSearch {
+  background: var(--primary-glow);
+  font-weight: bold;
+  border: none;
+  padding: 0 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.event-monitor {
+  grid-column: span 2;
+  margin-top: 25px;
+  background: #050505;
+  border: 1px solid var(--alert-yellow);
+  border-radius: 12px;
+  padding: 15px;
+  font-family: "Consolas", monospace;
+  font-size: 0.85rem;
+
+  height: fit-content;
+  overflow: hidden;
+
+  box-shadow: inset 0 0 15px rgba(248, 230, 2, 0.05);
+}
+
+.log-entry {
+  margin: 3px 0;
+  font-size: 13px;
+}
+.type-sync {
+  color: #fff;
+  border-left: 2px solid #fff;
+  padding-left: 8px;
+}
+.type-async {
+  color: var(--primary-glow);
+  border-left: 2px solid var(--primary-glow);
+  padding-left: 8px;
+}
+.type-micro {
+  color: #bb86fc;
+}
+.type-macro {
+  color: #ffb86c;
+}
